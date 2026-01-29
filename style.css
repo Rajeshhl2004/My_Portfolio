@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+}
+
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav {
+    width: 90%;
+    margin: auto;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 24px;
+    color: #00ffd5;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: #00ffd5;
+    border-bottom: 2px solid #00ffd5;
+}
+
+
+.hero {
+    height: 100vh;
+    background: radial-gradient(circle at top, #00ffd5, #0f2027 60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 50px;
+}
+
+.hero-content span {
+    color: #00ffd5;
+}
+
+.typing {
+    margin: 15px 0;
+    font-size: 22px;
+    min-height: 28px;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 14px 35px;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #00ffd5, #00aaff);
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+}
+
+
+section {
+    width: 90%;
+    margin: 100px auto;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #00ffd5;
+}
+
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 25px;
+}
+
+.skill-box {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    padding: 22px;
+    text-align: center;
+    border-radius: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.skill-box:hover {
+    transform: translateY(-8px) scale(1.05);
+    background: rgba(0,255,213,0.15);
+}
+
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 0 25px rgba(0,255,213,0.15);
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+.project-card h3 {
+    color: #00ffd5;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+
+footer {
+    background: rgba(0,0,0,0.6);
+    text-align: center;
+    padding: 15px;
+    margin-top: 60px;
+}
+
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero-content h2 {
+        font-size: 32px;
+    }
+
+    .typing {
+        font-size: 18px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    .about p {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .hero-content h2 {
+        font-size: 40px;
+    }
+
+    section {
+        width: 95%;
+    }
+
+    .skills {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+    section {
+        width: 95%;
+    }
+}
